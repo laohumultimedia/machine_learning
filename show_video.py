@@ -7,6 +7,7 @@ while True:
   for frame in data:
     frame = frame.reshape([180, 240, 3])
     cv2.imshow('frame', frame)
+    cv2.waitKey(50)
     if cv2.waitKey(1) & 0xFF == ord('q'):
       break
 cv2.destroyAllWindows()
